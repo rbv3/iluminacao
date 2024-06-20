@@ -40,6 +40,7 @@ const geometry = new THREE.PlaneGeometry(1, 1, 32, 32)
 function setGUI(material) {
     gui.destroy()
     gui = new dat.GUI()
+    gui.add(material, 'wireframe')
     gui.add(material.uniforms.uKa, 'value').min(0).max(1).step(0.001).name('Ka')
     gui.add(material.uniforms.uKd, 'value').min(0).max(1).step(0.001).name('Kd')
     gui.add(material.uniforms.uKs, 'value').min(0).max(1).step(0.001).name('Ks')
